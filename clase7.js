@@ -25,3 +25,32 @@ function imprimirNombreYEdad() {
   // Hola, me llamo Sacha y tengo 28 años
   // Hola, me llamo Darío y tengo 27 años
 }
+
+// Reto
+var valentina = {
+  nombre: 'Valentina',
+  apellido: 'S',
+  edad: 8
+}
+
+var ginna = {
+  nombre: 'Ginna',
+  apellido: 'M',
+  edad: 18
+}
+
+var julian = {
+  nombre: 'Julian',
+  apellido: 'S',
+  edad: 28
+}
+
+function imprimirNombreEnMayusculas({ nombre, apellido, edad }) {
+  let saludo = `Hola me llamo ${nombre} ${apellido} y tengo ${edad} años`;
+  console.log(saludo)
+}
+
+imprimirNombreEnMayusculas(valentina)
+imprimirNombreEnMayusculas(ginna)
+imprimirNombreEnMayusculas(julian)
+ 
