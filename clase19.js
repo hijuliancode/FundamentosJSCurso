@@ -44,7 +44,7 @@ var personasAltas = personas.filter(esAlta)
 // })
 
 // persona.altura = persona.altura * 100
-const pasarAlturaACms = persona => ({
+const pasarAlturaACms = persona => ({ // Para que no se confundan las llaves del objeto con las del cuerpo de la función, se agregan parentesis
   ...persona,
   altura: persona.altura * 100
 })
