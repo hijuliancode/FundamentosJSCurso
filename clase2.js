@@ -1,4 +1,4 @@
-var nombre = 'Sacha', apellido = 'Lifszyc'
+var nombre = 'Julian', apellido = 'Sosa'
 
 var nombreEnMayusculas = nombre.toUpperCase()
 var apellidoEnMinusculas = apellido.toLowerCase()
@@ -6,6 +6,10 @@ var apellidoEnMinusculas = apellido.toLowerCase()
 var primeraLetraDelNombre = nombre.charAt(0)
 var cantidadDeLetrasDelNombre = nombre.length
 
-var nombreCompleto = `${nombre} ${apellido.toUpperCase()}`
+// Interpolación de variables 
+var nombreCompleto = `${nombre} ${apellido.toUpperCase()}` // dentro de ${} podemos escribir código javascript, por ejemplo .toUpperCase()
 
-var str = nombre.substr(1, 2)
+var str = nombre.substr(0, 2) // Acceder a un string dentro de otro string, 
+
+// Reto, ultima letra nombre
+var ultimaLetraNombre = nombreCompleto.charAt(nombreCompleto.length - 1);
