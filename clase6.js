@@ -32,3 +32,32 @@ imprimirNombreEnMayusculas(dario)
 // imprimirNombreEnMayusculas({ nombre: 'Pepito' }) 
 imprimirNombreEnMayusculas() // Error, no se esta pasando un atributo y la función espera uno
 imprimirNombreEnMayusculas({ apellido: 'Gomez' }) // Error, el objeto no tiene el atributo nombre
+
+
+// Reto
+var valentina = {
+  nombre: 'Valentina',
+  apellido: 'S',
+  edad: 8
+}
+
+var ginna = {
+  nombre: 'Ginna',
+  apellido: 'M',
+  edad: 18
+}
+
+var julian = {
+  nombre: 'Julian',
+  apellido: 'S',
+  edad: 28
+}
+
+function imprimirNombreEnMayusculas({ nombre, apellido, edad }) {
+  let saludo = `Hola me llamo ${nombre} ${apellido} y tengo ${edad} años`;
+  console.log(saludo)
+}
+
+imprimirNombreEnMayusculas(valentina)
+imprimirNombreEnMayusculas(ginna)
+imprimirNombreEnMayusculas(julian)
