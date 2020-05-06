@@ -34,13 +34,24 @@ var paula = {
   altura: 1.76
 }
 
-const esAlta = ({ altura }) => altura > 1.8
+const ALTURA_PERSONA_ALTA = 1.8;
+
+// const esAlta = persona => persona.altura > 1.8
+const esAlta = ({ altura }) => altura >= ALTURA_PERSONA_ALTA
 
 var personas = [sacha, alan, martin, dario, vicky, paula]
 
 var personasAltas = personas.filter(esAlta)
-// var personasAltas = personas.filter(function (persona) {
+// var personasAltas = personas.filter(function (persona) { // Es lo mismo que la sentencía anterior, solo que separa la responsabilidad en otra función
 //   return persona.altura > 1.8
 // })
 
-console.log(personasAltas)
+// console.log(personasAltas)
+
+// RETO: Filtrado de personas bajas
+
+const esBaja = ({ altura }) => altura < ALTURA_PERSONA_ALTA;
+
+var personasBajas = personas.filter(esBaja);
+
+console.log(personasBajas)
