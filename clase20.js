@@ -63,8 +63,25 @@ var personasCms = personas.map(pasarAlturaACms)
 //   acum = acum + personas[i].cantidadDeLibros
 // }
 
-const reducer = (acum, { cantidadDeLibros }) => acum + cantidadDeLibros
+// En primer lugar recibe el acumulador, en segundo lugar cada una de las personas
+function reducer(acum, persona) {
+  // simplemente lo que tenemos que hacer es modificar el valor que queremos que tenga el nuevo acumulador.
+  return acum + persona.cantidadDeLibros;  
+}
 
+// Otra forma de escribir reducer, ES6, (puede ser const en lugar de var)
+var reducer = (acum, persona) => acum + persona.cantidadDeLibros
+// O también desglozando pesona
+var reducer = (acum, { cantidadDeLibros }) => acum + cantidadDeLibros
+
+// reducer es una función que le paso como parametro, y el 0 es el valor inicial del acumulador
+// Arriba en var cum = 0, lo inicializabamos en 0, ahora es aquí.
 var totalDeLibros = personas.reduce(reducer, 0)
 
 console.log(`En total todos tienen ${totalDeLibros} libros`)
+
+
+// Demo Profesor
+// const reducer = (acum, { cantidadDeLibros }) => acum + cantidadDeLibros
+// var totalDeLibros = personas.reduce(reducer, 0)
+// console.log(`En total todos tienen ${totalDeLibros} libros`)
